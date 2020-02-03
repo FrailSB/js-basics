@@ -86,14 +86,105 @@
 // var x;
 // console.log(typeof x);
 
-/*********************
- * Operator precedence
- *********************/
+// /*********************
+//  * Operator precedence
+//  *********************/
 
-var now, yearJohn, fullAge;
-now = 2020;
-yearJohn = 1997;
-fullAge = 22;
+// var now, yearJohn, fullAge;
+// now = 2020;
+// yearJohn = 1997;
+// fullAge = 22;
 
-var isFullAge = now - yearJohn >= fullAge;
-console.log(isFullAge);
+// // Multiple operators
+// var isFullAge = now - yearJohn >= fullAge;
+// console.log(isFullAge);
+
+// // Grouping
+// var ageJohn = now - yearJohn;
+// var ageMark = 22;
+// var average = (ageJohn + ageMark) / 2;
+// console.log(average);
+
+// // Multiple assignments
+// var x, y;
+// x = y = (3 + 5) * 4 - 6;
+// console.log(x, y);
+
+// // More operators
+// x *= 2;
+// console.log(x);
+// x += 10;
+// console.log(x);
+// x++;
+// console.log(x);
+
+// /******************
+//  * Coding Challenge
+//  ******************/
+
+// /**
+//  * Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula:
+//  * BMI = mass / height^2 = mass / (height * height).
+//  * (mass in kg and height in meter).
+//  *
+//  * 1. Store Mark's and John's mass and height in variables
+//  * 2. Calculate both their BMIs
+//  * Create a boolean variable containing information about whether Mark has a higher BMI than John.
+//  * Print a string to the console containing the variable from step3. (Something like "Mark's BMI higher than John's? true").
+//  */
+
+// var markMass, johnMass, markHeight, johnHeight;
+
+// markMass = 68;
+// johnMass = 51;
+
+// markHeight = 1.6;
+// johnHeight = 1.5;
+
+// var markBMI = markMass / (markHeight * markHeight);
+// var johnBMI = johnMass / (johnHeight * johnHeight);
+
+// var isMarkHigher = markBMI > johnBMI;
+
+// console.log("Mark's BMI higher than John's? " + isMarkHigher);
+
+/**********************
+ * If / else statements
+ **********************/
+
+var firstName = 'Frail';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+  console.log(firstName + ' is married!');
+} else {
+  console.log(firstName + ' is still single!');
+}
+
+var isMarried = true;
+if (isMarried) {
+  console.log(firstName + ' is married!');
+} else {
+  console.log(firstName + ' is still single!');
+}
+
+// Improve coding challenge with conditions
+var markMass, johnMass, markHeight, johnHeight;
+
+markMass = 68;
+johnMass = 51;
+
+markHeight = 1.6;
+johnHeight = 1.5;
+
+var markBMI = markMass / (markHeight * markHeight);
+var johnBMI = johnMass / (johnHeight * johnHeight);
+
+var isMarkHigher = markBMI > johnBMI;
+
+if (isMarkHigher) {
+  console.log("Mark's BMI is higher than John's.");
+} else {
+  console.log("John's BMI is higher than Mark's.");
+}
+// console.log("Mark's BMI higher than John's? " + isMarkHigher);
