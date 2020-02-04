@@ -148,43 +148,60 @@
 
 // console.log("Mark's BMI higher than John's? " + isMarkHigher);
 
-/**********************
- * If / else statements
- **********************/
+// /**********************
+//  * If / else statements
+//  **********************/
+
+// var firstName = 'Frail';
+// var civilStatus = 'single';
+
+// if (civilStatus === 'married') {
+//   console.log(firstName + ' is married!');
+// } else {
+//   console.log(firstName + ' is still single!');
+// }
+
+// var isMarried = true;
+// if (isMarried) {
+//   console.log(firstName + ' is married!');
+// } else {
+//   console.log(firstName + ' is still single!');
+// }
+
+// // Improve coding challenge with conditions
+// var markMass, johnMass, markHeight, johnHeight;
+
+// markMass = 68;
+// johnMass = 51;
+
+// markHeight = 1.6;
+// johnHeight = 1.5;
+
+// var markBMI = markMass / (markHeight * markHeight);
+// var johnBMI = johnMass / (johnHeight * johnHeight);
+
+// var isMarkHigher = markBMI > johnBMI;
+
+// if (isMarkHigher) {
+//   console.log("Mark's BMI is higher than John's.");
+// } else {
+//   console.log("John's BMI is higher than Mark's.");
+// }
+// // console.log("Mark's BMI higher than John's? " + isMarkHigher);
+
+/***************
+ * Boolean logic
+ ***************/
 
 var firstName = 'Frail';
-var civilStatus = 'single';
+var age = 22;
 
-if (civilStatus === 'married') {
-  console.log(firstName + ' is married!');
+if (age < 13) {
+  console.log(firstName + ' is a boy.');
+} else if (age >= 13 && age < 20) {
+  console.log(firstName + ' is a teenager.');
+} else if (age >= 20 && age < 30) {
+  console.log(firstName + ' is a young man.');
 } else {
-  console.log(firstName + ' is still single!');
+  console.log(firstName + ' is a man.');
 }
-
-var isMarried = true;
-if (isMarried) {
-  console.log(firstName + ' is married!');
-} else {
-  console.log(firstName + ' is still single!');
-}
-
-// Improve coding challenge with conditions
-var markMass, johnMass, markHeight, johnHeight;
-
-markMass = 68;
-johnMass = 51;
-
-markHeight = 1.6;
-johnHeight = 1.5;
-
-var markBMI = markMass / (markHeight * markHeight);
-var johnBMI = johnMass / (johnHeight * johnHeight);
-
-var isMarkHigher = markBMI > johnBMI;
-
-if (isMarkHigher) {
-  console.log("Mark's BMI is higher than John's.");
-} else {
-  console.log("John's BMI is higher than Mark's.");
-}
-// console.log("Mark's BMI higher than John's? " + isMarkHigher);
