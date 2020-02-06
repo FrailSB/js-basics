@@ -426,27 +426,65 @@
 // yearsUntilRetirement(1995, 'Mike');
 // yearsUntilRetirement(1999, 'Jane');
 
-/*************************************
- * Function statements and expressions
- *************************************/
+// /*************************************
+//  * Function statements and expressions
+//  *************************************/
 
-// Function declaration
-// function whatDoYouDo(job, firstName) {}
+// // Function declaration
+// // function whatDoYouDo(job, firstName) {}
 
-// Function expression
-var whatDoYouDo = function(job, firstName) {
-  switch (job) {
-    case 'teacher':
-      return firstName + ' teaches kids how to code.';
-    case 'driver':
-      return firstName + ' drives a car.';
-    case 'designer':
-      return firstName + ' designs beautiful websites.';
-    default:
-      return firstName + ' does something else.';
-  }
-};
+// // Function expression
+// var whatDoYouDo = function(job, firstName) {
+//   switch (job) {
+//     case 'teacher':
+//       return firstName + ' teaches kids how to code.';
+//     case 'driver':
+//       return firstName + ' drives a car.';
+//     case 'designer':
+//       return firstName + ' designs beautiful websites.';
+//     default:
+//       return firstName + ' does something else.';
+//   }
+// };
 
-console.log(whatDoYouDo('teacher', 'John'));
-console.log(whatDoYouDo('designer', 'Jane'));
-console.log(whatDoYouDo('retired', 'Mark'));
+// console.log(whatDoYouDo('teacher', 'John'));
+// console.log(whatDoYouDo('designer', 'Jane'));
+// console.log(whatDoYouDo('retired', 'Mark'));
+
+/********
+ * Arrays
+ ********/
+
+// Initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+console.log(names.length);
+
+// Mutate array data
+names[2] = 'Bob';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Different data types
+
+var john = ['John', 'Smith', 1990, 'developer', false];
+
+john.push('blue');
+john.unshift('Mr.');
+console.log(john);
+
+john.pop();
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf('developer'));
+
+var isDesigner =
+  john.indexOf('designer') === -1
+    ? 'John is not a designer'
+    : 'John is a designer;';
+
+console.log(isDesigner);
