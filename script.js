@@ -278,122 +278,150 @@
 //   console.log('The == operator does type coercion!');
 // }
 
-/********************
- * Coding Challenge 2
- ********************/
+// /********************
+//  * Coding Challenge 2
+//  ********************/
 
-/**
- * John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89, 120, and 103 points, while Mike's team scored 116, 94, and 123 points.
- *
- * 1. Calculate the average score for each team
- * 2. Decide which teams wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
- * 3. Then change the scores to show different winners. Don't forget to take into account there might be a draw (the same average score)
- *
- * 4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner in the console. HINT: you will need the && operator to take the decision. If you can't solve this one, just watch the solution, it's no problem :)
- * 5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
- */
+// /**
+//  * John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89, 120, and 103 points, while Mike's team scored 116, 94, and 123 points.
+//  *
+//  * 1. Calculate the average score for each team
+//  * 2. Decide which teams wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
+//  * 3. Then change the scores to show different winners. Don't forget to take into account there might be a draw (the same average score)
+//  *
+//  * 4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner in the console. HINT: you will need the && operator to take the decision. If you can't solve this one, just watch the solution, it's no problem :)
+//  * 5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
+//  */
 
-var johnsTeamAverageScore = (89 + 120 + 103) / 3;
-var mikesTeamAverageScore = (116 + 94 + 123) / 3;
+// var johnsTeamAverageScore = (89 + 120 + 103) / 3;
+// var mikesTeamAverageScore = (116 + 94 + 123) / 3;
 
-console.log(johnsTeamAverageScore, mikesTeamAverageScore);
+// console.log(johnsTeamAverageScore, mikesTeamAverageScore);
 
-// There's no draw option (try to find a draw option)
-johnsTeamAverageScore > mikesTeamAverageScore
-  ? console.log("John's team wins in average score.")
-  : console.log("Mike's team wins in average score.");
+// // There's no draw option (try to find a draw option)
+// johnsTeamAverageScore > mikesTeamAverageScore
+//   ? console.log("John's team wins in average score.")
+//   : console.log("Mike's team wins in average score.");
 
-// There is a draw option
-if (johnsTeamAverageScore > mikesTeamAverageScore) {
-  console.log("John's team wins in average score.");
-} else if (johnsTeamAverageScore === mikesTeamAverageScore) {
-  console.log("John and Mike's team both achieve the same average score.");
-} else {
-  console.log("Mike's team wins in average score.");
+// // There is a draw option
+// if (johnsTeamAverageScore > mikesTeamAverageScore) {
+//   console.log("John's team wins in average score.");
+// } else if (johnsTeamAverageScore === mikesTeamAverageScore) {
+//   console.log("John and Mike's team both achieve the same average score.");
+// } else {
+//   console.log("Mike's team wins in average score.");
+// }
+
+// // Using switch
+// switch (true) {
+//   case johnsTeamAverageScore > mikesTeamAverageScore:
+//     console.log("John's team wins in average score.");
+//     break;
+//   case johnsTeamAverageScore === mikesTeamAverageScore:
+//     console.log("John and Mike's team both achieve the same average score.");
+//     break;
+//   default:
+//     console.log("Mike's team wins in average score.");
+// }
+
+// // EXTRA
+// var marysTeamAverageScore = (97 + 134 + 105) / 3;
+
+// console.log(
+//   johnsTeamAverageScore,
+//   mikesTeamAverageScore,
+//   marysTeamAverageScore
+// );
+
+// // Using if else
+// if (
+//   johnsTeamAverageScore > mikesTeamAverageScore &&
+//   johnsTeamAverageScore > marysTeamAverageScore
+// ) {
+//   console.log("John's team wins in average score.");
+// } else if (
+//   mikesTeamAverageScore > johnsTeamAverageScore &&
+//   mikesTeamAverageScore > marysTeamAverageScore
+// ) {
+//   console.log("Mike's team wins in average score.");
+// } else if (
+//   marysTeamAverageScore > johnsTeamAverageScore &&
+//   marysTeamAverageScore > mikesTeamAverageScore
+// ) {
+//   console.log("Mary's team wins in average score");
+// } else if (
+//   johnsTeamAverageScore > marysTeamAverageScore &&
+//   johnsTeamAverageScore === mikesTeamAverageScore
+// ) {
+//   console.log("John and Mike's team wins in average score");
+// } else if (
+//   johnsTeamAverageScore > mikesTeamAverageScore &&
+//   johnsTeamAverageScore === marysTeamAverageScore
+// ) {
+//   console.log("John and Mary's team wins in average score");
+// } else if (
+//   mikesTeamAverageScore > johnsTeamAverageScore &&
+//   mikesTeamAverageScore === marysTeamAverageScore
+// ) {
+//   console.log("Mike and Mary's team wins in average score");
+// } else {
+//   console.log('All the team wins');
+// }
+
+// // Using switch
+// switch (true) {
+//   case johnsTeamAverageScore > mikesTeamAverageScore &&
+//     johnsTeamAverageScore > marysTeamAverageScore:
+//     console.log("John's team wins in average score.");
+//     break;
+//   case mikesTeamAverageScore > johnsTeamAverageScore &&
+//     mikesTeamAverageScore > marysTeamAverageScore:
+//     console.log("Mike's team wins in average score.");
+//     break;
+//   case marysTeamAverageScore > johnsTeamAverageScore &&
+//     marysTeamAverageScore > mikesTeamAverageScore:
+//     console.log("Mary's team wins in average score");
+//     break;
+//   case johnsTeamAverageScore > marysTeamAverageScore &&
+//     johnsTeamAverageScore === mikesTeamAverageScore:
+//     console.log("John and Mike's team wins in average score");
+//     break;
+//   case johnsTeamAverageScore > mikesTeamAverageScore &&
+//     johnsTeamAverageScore === marysTeamAverageScore:
+//     console.log("John and Mary's team wins in average score");
+//     break;
+//   case mikesTeamAverageScore > johnsTeamAverageScore &&
+//     mikesTeamAverageScore === marysTeamAverageScore:
+//     console.log("Mike and Mary's team wins in average score");
+//     break;
+//   default:
+//     console.log('All the team wins');
+// }
+
+/***********
+ * Functions
+ ***********/
+
+function calculateAge(birthYear) {
+  return 2020 - birthYear;
 }
 
-// Using switch
-switch (true) {
-  case johnsTeamAverageScore > mikesTeamAverageScore:
-    console.log("John's team wins in average score.");
-    break;
-  case johnsTeamAverageScore === mikesTeamAverageScore:
-    console.log("John and Mike's team both achieve the same average score.");
-    break;
-  default:
-    console.log("Mike's team wins in average score.");
+var frailAge = calculateAge(1997);
+var mikeAge = calculateAge(1995);
+var janeAge = calculateAge(1999);
+console.log(frailAge, mikeAge, janeAge);
+
+function yearsUntilRetirement(year, firstName) {
+  var age = calculateAge(year);
+  var retirement = 60 - age;
+
+  if (retirement > 0) {
+    console.log(firstName + ' retires in ' + retirement + ' years.');
+  } else {
+    console.log(firstName + ' is already retired.');
+  }
 }
 
-// EXTRA
-var marysTeamAverageScore = (97 + 134 + 105) / 3;
-
-console.log(
-  johnsTeamAverageScore,
-  mikesTeamAverageScore,
-  marysTeamAverageScore
-);
-
-// Using if else
-if (
-  johnsTeamAverageScore > mikesTeamAverageScore &&
-  johnsTeamAverageScore > marysTeamAverageScore
-) {
-  console.log("John's team wins in average score.");
-} else if (
-  mikesTeamAverageScore > johnsTeamAverageScore &&
-  mikesTeamAverageScore > marysTeamAverageScore
-) {
-  console.log("Mike's team wins in average score.");
-} else if (
-  marysTeamAverageScore > johnsTeamAverageScore &&
-  marysTeamAverageScore > mikesTeamAverageScore
-) {
-  console.log("Mary's team wins in average score");
-} else if (
-  johnsTeamAverageScore > marysTeamAverageScore &&
-  johnsTeamAverageScore === mikesTeamAverageScore
-) {
-  console.log("John and Mike's team wins in average score");
-} else if (
-  johnsTeamAverageScore > mikesTeamAverageScore &&
-  johnsTeamAverageScore === marysTeamAverageScore
-) {
-  console.log("John and Mary's team wins in average score");
-} else if (
-  mikesTeamAverageScore > johnsTeamAverageScore &&
-  mikesTeamAverageScore === marysTeamAverageScore
-) {
-  console.log("Mike and Mary's team wins in average score");
-} else {
-  console.log('All the team wins');
-}
-
-// Using switch
-switch (true) {
-  case johnsTeamAverageScore > mikesTeamAverageScore &&
-    johnsTeamAverageScore > marysTeamAverageScore:
-    console.log("John's team wins in average score.");
-    break;
-  case mikesTeamAverageScore > johnsTeamAverageScore &&
-    mikesTeamAverageScore > marysTeamAverageScore:
-    console.log("Mike's team wins in average score.");
-    break;
-  case marysTeamAverageScore > johnsTeamAverageScore &&
-    marysTeamAverageScore > mikesTeamAverageScore:
-    console.log("Mary's team wins in average score");
-    break;
-  case johnsTeamAverageScore > marysTeamAverageScore &&
-    johnsTeamAverageScore === mikesTeamAverageScore:
-    console.log("John and Mike's team wins in average score");
-    break;
-  case johnsTeamAverageScore > mikesTeamAverageScore &&
-    johnsTeamAverageScore === marysTeamAverageScore:
-    console.log("John and Mary's team wins in average score");
-    break;
-  case mikesTeamAverageScore > johnsTeamAverageScore &&
-    mikesTeamAverageScore === marysTeamAverageScore:
-    console.log("Mike and Mary's team wins in average score");
-    break;
-  default:
-    console.log('All the team wins');
-}
+yearsUntilRetirement(1997, 'Frail');
+yearsUntilRetirement(1995, 'Mike');
+yearsUntilRetirement(1999, 'Jane');
