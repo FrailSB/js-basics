@@ -58,7 +58,7 @@
 // console.log(firstName + ' ' + middleName + ' ' + lastName);
 
 // /*****************
-//  * Basic Operators
+//  * Basic operators
 //  *****************/
 
 // var year, yearJohn, yearMark, ageJohn, ageMark;
@@ -119,7 +119,7 @@
 // console.log(x);
 
 // /********************
-//  * Coding Challenge 1
+//  * Coding challenge 1
 //  ********************/
 
 // /**
@@ -279,7 +279,7 @@
 // }
 
 // /********************
-//  * Coding Challenge 2
+//  * Coding challenge 2
 //  ********************/
 
 // /**
@@ -398,30 +398,55 @@
 //     console.log('All the team wins');
 // }
 
-/***********
- * Functions
- ***********/
+// /***********
+//  * Functions
+//  ***********/
 
-function calculateAge(birthYear) {
-  return 2020 - birthYear;
-}
+// function calculateAge(birthYear) {
+//   return 2020 - birthYear;
+// }
 
-var frailAge = calculateAge(1997);
-var mikeAge = calculateAge(1995);
-var janeAge = calculateAge(1999);
-console.log(frailAge, mikeAge, janeAge);
+// var frailAge = calculateAge(1997);
+// var mikeAge = calculateAge(1995);
+// var janeAge = calculateAge(1999);
+// console.log(frailAge, mikeAge, janeAge);
 
-function yearsUntilRetirement(year, firstName) {
-  var age = calculateAge(year);
-  var retirement = 60 - age;
+// function yearsUntilRetirement(year, firstName) {
+//   var age = calculateAge(year);
+//   var retirement = 60 - age;
 
-  if (retirement > 0) {
-    console.log(firstName + ' retires in ' + retirement + ' years.');
-  } else {
-    console.log(firstName + ' is already retired.');
+//   if (retirement > 0) {
+//     console.log(firstName + ' retires in ' + retirement + ' years.');
+//   } else {
+//     console.log(firstName + ' is already retired.');
+//   }
+// }
+
+// yearsUntilRetirement(1997, 'Frail');
+// yearsUntilRetirement(1995, 'Mike');
+// yearsUntilRetirement(1999, 'Jane');
+
+/*************************************
+ * Function statements and expressions
+ *************************************/
+
+// Function declaration
+// function whatDoYouDo(job, firstName) {}
+
+// Function expression
+var whatDoYouDo = function(job, firstName) {
+  switch (job) {
+    case 'teacher':
+      return firstName + ' teaches kids how to code.';
+    case 'driver':
+      return firstName + ' drives a car.';
+    case 'designer':
+      return firstName + ' designs beautiful websites.';
+    default:
+      return firstName + ' does something else.';
   }
-}
+};
 
-yearsUntilRetirement(1997, 'Frail');
-yearsUntilRetirement(1995, 'Mike');
-yearsUntilRetirement(1999, 'Jane');
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
