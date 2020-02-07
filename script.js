@@ -538,30 +538,49 @@
 // console.log(tips);
 // console.log(finalAmount);
 
-/************************
- * Objects and properties
- ************************/
+// /************************
+//  * Objects and properties
+//  ************************/
 
-// Object literal
+// // Object literal
+// var frail = {
+//   firstName: "Frail",
+//   lastName: "Bongat",
+//   birthYear: 1990,
+//   hobbies: ["Tennis", "Gaming", "Coding"],
+//   job: "developer",
+//   isMarried: false
+// };
+// console.log(frail.firstName);
+// console.log(frail["lastName"]);
+// var x = "birthYear";
+// console.log(frail[x]);
+
+// frail.job = "designer";
+// console.log(frail);
+
+// // New object syntax
+// var jane = new Object();
+// jane.name = "Jane";
+// jane.birthYear = 1969;
+// jane["lastName"] = "Smith";
+// console.log(jane);
+
+/*********************
+ * Objects and methods
+ *********************/
+
 var frail = {
-  firstName: "Frail",
-  lastName: "Bongat",
-  birthYear: 1990,
-  hobbies: ["Tennis", "Gaming", "Coding"],
-  job: "developer",
-  isMarried: false
+  firstName: 'Frail',
+  lastName: 'Bongat',
+  birthYear: 1997,
+  hobbies: ['Tennis', 'Gaming', 'Coding'],
+  job: 'developer',
+  isMarried: false,
+  calcAge: function() {
+    this.age = 2020 - this.birthYear;
+  }
 };
-console.log(frail.firstName);
-console.log(frail["lastName"]);
-var x = "birthYear";
-console.log(frail[x]);
 
-frail.job = "designer";
+frail.calcAge();
 console.log(frail);
-
-// New object syntax
-var jane = new Object();
-jane.name = "Jane";
-jane.birthYear = 1969;
-jane["lastName"] = "Smith";
-console.log(jane);
