@@ -489,44 +489,79 @@
 
 // console.log(isDesigner);
 
-/********************
- * Coding challenge 3
- ********************/
+// /********************
+//  * Coding challenge 3
+//  ********************/
 
-/**
- * John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
- *
- * To tip the waiter a fair amount, John created a simple tip calculator (as a function). He likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
- *
- * In the end, John would like to have 2 arrays:
- * 1.) Containing all three tips (one for each bill)
- * 2.) Containing all three final paid amounts (bill + tip).
- *
- * (NOTE: To calculate 20% of a value, simply multiply if with 20/100 = 0.2)
- */
+// /**
+//  * John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
+//  *
+//  * To tip the waiter a fair amount, John created a simple tip calculator (as a function). He likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+//  *
+//  * In the end, John would like to have 2 arrays:
+//  * 1.) Containing all three tips (one for each bill)
+//  * 2.) Containing all three final paid amounts (bill + tip).
+//  *
+//  * (NOTE: To calculate 20% of a value, simply multiply if with 20/100 = 0.2)
+//  */
 
-var tipCalculator = function(amount) {
-  switch (true) {
-    case amount < 50:
-      return amount * 0.2;
-    case amount >= 50 && amount <= 200:
-      return amount * 0.15;
-    default:
-      return amount * 0.1;
-  }
+// var tipCalculator = function(amount) {
+//   switch (true) {
+//     case amount < 50:
+//       return amount * 0.2;
+//     case amount >= 50 && amount <= 200:
+//       return amount * 0.15;
+//     default:
+//       return amount * 0.1;
+//   }
+// };
+
+// function finalAmountCalculator(amount) {
+//   return amount + tipCalculator(amount);
+// }
+
+// var bills = [124, 48, 268];
+
+// var tips = [
+//   tipCalculator(bills[0]),
+//   tipCalculator(bills[1]),
+//   tipCalculator(bills[2])
+// ];
+
+// var finalAmount = [
+//   finalAmountCalculator(bills[0]),
+//   finalAmountCalculator(bills[1]),
+//   finalAmountCalculator(bills[2])
+// ];
+
+// console.log(bills);
+// console.log(tips);
+// console.log(finalAmount);
+
+/************************
+ * Objects and properties
+ ************************/
+
+// Object literal
+var frail = {
+  firstName: "Frail",
+  lastName: "Bongat",
+  birthYear: 1990,
+  hobbies: ["Tennis", "Gaming", "Coding"],
+  job: "developer",
+  isMarried: false
 };
+console.log(frail.firstName);
+console.log(frail["lastName"]);
+var x = "birthYear";
+console.log(frail[x]);
 
-var finalAmountCalculator = function(amount) {
-  return amount + tipCalculator(amount);
-};
+frail.job = "designer";
+console.log(frail);
 
-var tips = [tipCalculator(124), tipCalculator(48), tipCalculator(268)];
-
-var finalAmount = [
-  finalAmountCalculator(124),
-  finalAmountCalculator(48),
-  finalAmountCalculator(268)
-];
-
-console.log(tips);
-console.log(finalAmount);
+// New object syntax
+var jane = new Object();
+jane.name = "Jane";
+jane.birthYear = 1969;
+jane["lastName"] = "Smith";
+console.log(jane);
