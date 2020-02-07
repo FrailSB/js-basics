@@ -566,21 +566,65 @@
 // jane["lastName"] = "Smith";
 // console.log(jane);
 
-/*********************
- * Objects and methods
- *********************/
+// /*********************
+//  * Objects and methods
+//  *********************/
+
+// var frail = {
+//   firstName: 'Frail',
+//   lastName: 'Bongat',
+//   birthYear: 1997,
+//   hobbies: ['Tennis', 'Gaming', 'Coding'],
+//   job: 'developer',
+//   isMarried: false,
+//   calcAge: function() {
+//     this.age = 2020 - this.birthYear;
+//   }
+// };
+
+// frail.calcAge();
+// console.log(frail);
+
+/******************
+ * Coding challenge 4
+ ******************/
+
+/**
+ * Let's remember the first coding challenge where Mark and John compared their BMIs. Let's now implement the same functionality with objects and methods.
+ *
+ * 1. For each of them, create an object with properties for their full name, mass, and height.
+ * 2. Then, add a method to each object to calculate the BMI. Save the BMI to the object and also return it from the method.
+ * 3. In the end, log to the console who has the highest BMI, together with the full name and the respective BMI. Don't forget they might have the same BMI.
+ *
+ * REMEMBER: BMI = mass / height^2 = mass / (height * height). (Mass in kg and height in meter).
+ */
 
 var frail = {
-  firstName: 'Frail',
-  lastName: 'Bongat',
-  birthYear: 1997,
-  hobbies: ['Tennis', 'Gaming', 'Coding'],
-  job: 'developer',
-  isMarried: false,
-  calcAge: function() {
-    this.age = 2020 - this.birthYear;
+  name: 'Frail Bongat',
+  mass: 50,
+  height: 1.52,
+  calcBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+};
+var mark = {
+  name: 'Mark Doe',
+  mass: 75,
+  height: 1.56,
+  calcBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
   }
 };
 
-frail.calcAge();
-console.log(frail);
+switch (true) {
+  case frail.calcBMI() > mark.calcBMI():
+    console.log(frail.name + ' has the highest BMI of ' + frail.bmi + '.');
+    break;
+  case frail.bmi === mark.bmi:
+    console.log(frail.name + ' and ' + mark.name + ' both have the same BMI.');
+    break;
+  default:
+    console.log(mark.name + ' has the highest BMI of ' + mark.bmi + '.');
+}
