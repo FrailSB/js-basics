@@ -1,6 +1,6 @@
 // /**************************
 //  * Variables and data types
-//  **************************/
+//  */
 
 // var firstName = 'John Frail';
 // console.log(firstName);
@@ -19,7 +19,7 @@
 
 // /*************************************
 //  * Variable mutation and type coercion
-//  *************************************/
+//  */
 
 // // Type coercion
 // console.log(firstName + ' ' + age);
@@ -59,7 +59,7 @@
 
 // /*****************
 //  * Basic operators
-//  *****************/
+//  */
 
 // var year, yearJohn, yearMark, ageJohn, ageMark;
 // year = 2020;
@@ -88,7 +88,7 @@
 
 // /*********************
 //  * Operator precedence
-//  *********************/
+//  */
 
 // var now, yearJohn, fullAge;
 // now = 2020;
@@ -120,7 +120,7 @@
 
 // /********************
 //  * Coding challenge 1
-//  ********************/
+//  */
 
 // /**
 //  * Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula:
@@ -150,7 +150,7 @@
 
 // /**********************
 //  * If / else statements
-//  **********************/
+//  */
 
 // var firstName = 'Frail';
 // var civilStatus = 'single';
@@ -191,7 +191,7 @@
 
 // /***************
 //  * Boolean logic
-//  ***************/
+//  */
 
 // var firstName = 'Frail';
 // var age = 22;
@@ -208,7 +208,7 @@
 
 // /********************************************
 //  * The ternary operator and switch statements
-//  ********************************************/
+//  */
 
 // var firstName = 'Frail';
 // var age = 22;
@@ -260,7 +260,7 @@
 
 // /************************************************
 //  * Truthy and falsy values and equality operators
-//  ************************************************/
+//  */
 
 // //  Falsy values: undefined, null, 0, '', NaN
 // // Truthy values: NOT falsy values
@@ -280,7 +280,7 @@
 
 // /********************
 //  * Coding challenge 2
-//  ********************/
+//  */
 
 // /**
 //  * John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89, 120, and 103 points, while Mike's team scored 116, 94, and 123 points.
@@ -400,7 +400,7 @@
 
 // /***********
 //  * Functions
-//  ***********/
+//  */
 
 // function calculateAge(birthYear) {
 //   return 2020 - birthYear;
@@ -428,7 +428,7 @@
 
 // /*************************************
 //  * Function statements and expressions
-//  *************************************/
+//  */
 
 // // Function declaration
 // // function whatDoYouDo(job, firstName) {}
@@ -453,7 +453,7 @@
 
 // /********
 //  * Arrays
-//  ********/
+//  */
 
 // // Initialize new array
 // var names = ['John', 'Mark', 'Jane'];
@@ -491,7 +491,7 @@
 
 // /********************
 //  * Coding challenge 3
-//  ********************/
+//  */
 
 // /**
 //  * John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
@@ -540,7 +540,7 @@
 
 // /************************
 //  * Objects and properties
-//  ************************/
+//  */
 
 // // Object literal
 // var frail = {
@@ -568,7 +568,7 @@
 
 // /*********************
 //  * Objects and methods
-//  *********************/
+//  */
 
 // var frail = {
 //   firstName: 'Frail',
@@ -585,46 +585,90 @@
 // frail.calcAge();
 // console.log(frail);
 
-/******************
- * Coding challenge 4
- ******************/
+// /******************
+//  * Coding challenge 4
+//  */
 
-/**
- * Let's remember the first coding challenge where Mark and John compared their BMIs. Let's now implement the same functionality with objects and methods.
- *
- * 1. For each of them, create an object with properties for their full name, mass, and height.
- * 2. Then, add a method to each object to calculate the BMI. Save the BMI to the object and also return it from the method.
- * 3. In the end, log to the console who has the highest BMI, together with the full name and the respective BMI. Don't forget they might have the same BMI.
- *
- * REMEMBER: BMI = mass / height^2 = mass / (height * height). (Mass in kg and height in meter).
+// /**
+//  * Let's remember the first coding challenge where Mark and John compared their BMIs. Let's now implement the same functionality with objects and methods.
+//  *
+//  * 1. For each of them, create an object with properties for their full name, mass, and height.
+//  * 2. Then, add a method to each object to calculate the BMI. Save the BMI to the object and also return it from the method.
+//  * 3. In the end, log to the console who has the highest BMI, together with the full name and the respective BMI. Don't forget they might have the same BMI.
+//  *
+//  * REMEMBER: BMI = mass / height^2 = mass / (height * height). (Mass in kg and height in meter).
+//  */
+
+// var frail = {
+//   name: 'Frail Bongat',
+//   mass: 50,
+//   height: 1.52,
+//   calcBMI: function() {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// };
+// var mark = {
+//   name: 'Mark Doe',
+//   mass: 75,
+//   height: 1.56,
+//   calcBMI: function() {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// };
+
+// switch (true) {
+//   case frail.calcBMI() > mark.calcBMI():
+//     console.log(frail.name + ' has the highest BMI of ' + frail.bmi + '.');
+//     break;
+//   case frail.bmi === mark.bmi:
+//     console.log(frail.name + ' and ' + mark.name + ' both have the same BMI.');
+//     break;
+//   default:
+//     console.log(mark.name + ' has the highest BMI of ' + mark.bmi + '.');
+// }
+
+/*********************
+ * Loops and iteration
  */
 
-var frail = {
-  name: 'Frail Bongat',
-  mass: 50,
-  height: 1.52,
-  calcBMI: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  }
-};
-var mark = {
-  name: 'Mark Doe',
-  mass: 75,
-  height: 1.56,
-  calcBMI: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  }
-};
+// For loop
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
 
-switch (true) {
-  case frail.calcBMI() > mark.calcBMI():
-    console.log(frail.name + ' has the highest BMI of ' + frail.bmi + '.');
-    break;
-  case frail.bmi === mark.bmi:
-    console.log(frail.name + ' and ' + mark.name + ' both have the same BMI.');
-    break;
-  default:
-    console.log(mark.name + ' has the highest BMI of ' + mark.bmi + '.');
+// i = 0, 0 < 10 true, log i to console, i++
+// i = 1, 1 < 10 true, log i to console, i++
+// ...
+// i = 9, 9 < 10 true, log i to console, i++
+// i = 10, 10 < 10 false, exit the loop
+
+var frail = ['Frail', 'Smith', 1990, 'developer', false];
+
+for (var i = 0; i < frail.length; i++) {
+  console.log(frail[i]);
+}
+
+// While loop
+var i = 0;
+while (i < frail.length) {
+  console.log(frail[i]);
+  i++;
+}
+
+// Continue and break statements
+for (var i = 0; i < frail.length; i++) {
+  if (typeof frail[i] !== 'string') continue;
+  console.log(frail[i]);
+}
+
+for (var i = 0; i < frail.length; i++) {
+  if (typeof frail[i] !== 'string') break;
+  console.log(frail[i]);
+}
+
+// Challenge: Lopping backwards
+for (var i = frail.length - 1; i >= 0; i--) {
+  console.log(frail[i]);
 }
